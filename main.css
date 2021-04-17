@@ -1,8 +1,9 @@
 .container {
   margin: 20px;
   display: grid;
-  grid-template-columns: 200px 2fr 150px 1fr;
-  grid-template-rows: 5rem 2.5rem;
+  /* grid-template-columns: 200px 80px 150px auto; */
+  grid-template-columns: repeat(4, 150px);
+  grid-template-rows: 5rem minmax(150px, 400px);
 }
 
 .el1 {
@@ -15,10 +16,10 @@
 
 .el3 {
   background: rgba(0, 128, 0, 0.5);
-  grid-column-start: 3;
+  /* grid-column-start: 3;
   grid-column-end: 5;
   grid-row-start: 1;
-  grid-row-end: 3;
+  grid-row-end: 3; */
 }
 
 .el4 {
