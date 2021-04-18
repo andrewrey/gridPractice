@@ -1,10 +1,10 @@
 .container {
   margin: 20px;
   display: grid;
-  /* grid-template-columns: 200px 80px 150px auto; */
-  grid-template-columns: repeat(4, 150px);
+  grid-template-columns: 200px 300px auto 150px;
+  /* grid-template-columns: repeat(4, 150px); */
   grid-template-rows: [row-1-start] 5rem [row-1-end row-2-start] 10rem [row-2-end row-3-start] 200px [row-3-end];
-  gap: 5px;
+  gap: 10px;
 }
 
 .el1 {
