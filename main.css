@@ -6,7 +6,6 @@ body {
   /* margin: 20px; */
   display: grid;
   height: 500px;
-  width: 500px;
   /* grid-template-columns: 200px 300px auto 150px; */
   grid-template-columns: repeat(4, [col-start] 20% [col-end]);
   grid-template-rows:
@@ -15,12 +14,26 @@ body {
   gap: 10px;
   grid-template-areas:
     "hd hd hd hd"
-    "as as  main main"
+    ".. as  main main"
     "ft ft ft ft";
   /* justify-items: stretch;
   align-items: end; */
   justify-content: center;
   align-content: center;
+}
+
+@media (max-width: 40rem) {
+  .container {
+    grid-template-rows:
+      [row-1-start] 5rem [row-1-end row-2-start] minmax(10px, 20rem)
+      [row-2-end row-3-start] 150px [row-3-end row-4-start] 100px [row-4-end];
+    gap: 10px;
+    grid-template-areas:
+      "hd hd hd hd"
+      "main main main main"
+      "as as as .."
+      "ft ft ft ft";
+  }
 }
 
 .el1 {
